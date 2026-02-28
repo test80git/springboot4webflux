@@ -1,27 +1,26 @@
 # Getting Started
 
-### Reference Documentation
 
-For further reference, please consider the following sections:
-
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/4.0.3/gradle-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/4.0.3/gradle-plugin/packaging-oci-image.html)
-* [Spring Data R2DBC](https://docs.spring.io/spring-boot/4.0.3/reference/data/sql.html#data.sql.r2dbc)
-* [Flyway Migration](https://docs.spring.io/spring-boot/4.0.3/how-to/data-initialization.html#howto.data-initialization.migration-tool.flyway)
-* [Spring Reactive Web](https://docs.spring.io/spring-boot/4.0.3/reference/web/reactive.html)
-
-### Guides
-
-The following guides illustrate how to use some features concretely:
-
-* [Accessing data with R2DBC](https://spring.io/guides/gs/accessing-data-r2dbc/)
-* [Building a Reactive RESTful Web Service](https://spring.io/guides/gs/reactive-rest-service/)
-
-### Additional Links
-
-These additional references should also help you:
-
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
-* [R2DBC Homepage](https://r2dbc.io)
-
+Запустить Docker, запустить контейнер shard-order-postgres
+Внутри контейнера выбрать вкладку Exec и выполнить команды
+```bash
+psql -U postgres
+# psql (16.6 (Debian 16.6-1.pgdg120+1))
+# Type "help" for help.
+```
+Список всех баз данных
+```bash
+\l
+```
+Подключиться к базе данных
+```bash
+\c postgres
+# You are now connected to database "postgres" as user "postgres".
+```
+Список всех таблиц в текущей БД
+```bash
+\dt
+```
+```cassandraql
+SELECT * FROM users;
+```
